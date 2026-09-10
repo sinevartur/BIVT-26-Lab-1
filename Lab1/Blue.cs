@@ -31,7 +31,13 @@ namespace Lab1
             bool answer = false;
 
             // code here
-
+            if (b != 0)
+            {
+                if (a % b == 0)
+                {
+                    answer = true;
+                }
+            }
             // end
 
             return answer;
@@ -41,7 +47,12 @@ namespace Lab1
             double answer = 0;
 
             // code here
-
+            if (Math.Abs(d) > Math.Abs(f) && Math.Abs(d) > Math.Abs(g))
+            { answer = d; }
+            if (Math.Abs(f) > Math.Abs(d) && Math.Abs(f) > Math.Abs(g))
+            { answer = f; }
+            if (Math.Abs(g) > Math.Abs(f) && Math.Abs(g) > Math.Abs(d))
+            { answer = g; }
             // end
 
             return answer;
@@ -51,7 +62,9 @@ namespace Lab1
             double answer = 0;
 
             // code here
-
+            if (x <= -1) { answer = 0; }
+            if (x > -1 && x <= 0) { answer = x + 1; }
+            if (x > 0) { answer = 1; }
             // end
 
             return answer;
@@ -72,7 +85,16 @@ namespace Lab1
             int answer = 0;
 
             // code here
-
+            if (Math.Abs(d) < Math.Abs(f))
+            {
+                if (d > 0) { answer = -1; }
+                else { return answer; }
+            }
+            else
+            {
+                if (f > 0) { answer = 1; }
+                else { return answer; }
+            }
             // end
 
             return answer;
