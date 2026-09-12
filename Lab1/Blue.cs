@@ -74,7 +74,10 @@ namespace Lab1
             bool answer = false;
 
             // code here
-
+            var diam_sq = Math.Sqrt(squareS);
+            var rad_cir = Math.Sqrt(circleS / Math.PI);
+            var diam_cir = rad_cir * 2;
+            if (diam_sq >= diam_cir) { answer = true; }
             // end
 
             return answer;
@@ -104,7 +107,27 @@ namespace Lab1
             bool answer = false;
 
             // code here
-            
+            int first = a / 2;
+            int second = b / 2;
+            int third = c / 2;
+
+            int total = first + second + third;
+
+            if (total % 3 == 0)
+            {
+                int equal = total / 3;
+                if (equal >= 1 && equal <= Math.Min(a, Math.Min(b, c)))
+                { answer = true; }
+            }
+
+            total++;
+
+            if (total % 3 == 0)
+            {
+                int equal = total / 3;
+                if (equal >= 1 && equal <= Math.Min(a, Math.Min(b, c)))
+                { answer = true; }
+            }
             // end
 
             return answer;
